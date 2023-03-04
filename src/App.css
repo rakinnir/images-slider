@@ -1,0 +1,56 @@
+*,
+*::after,
+*::before {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  background-color: hsl(252, 100%, 77%);
+  color: white;
+  padding-top: 5rem;
+}
+
+.App {
+  margin: auto;
+  display: grid;
+  justify-content: center;
+  min-height: 500px;
+  width: 70%;
+  max-width: 650px;
+  border: 4px solid white;
+  border-radius: 1rem;
+  grid-template-rows: 0.25fr 1fr;
+  gap: 3rem;
+}
+
+.searchbox {
+  margin-top: 4rem;
+  height: 2.5rem;
+  display: grid;
+  grid-auto-flow: column;
+  border: 1px solid white;
+  border-radius: 0.6rem 0 0 0.6rem;
+}
+
+.searchbox_input {
+  border-radius: 0.5rem 0 0 0.5rem;
+  border: none;
+  min-width: 16rem;
+  padding-left: 1rem;
+  outline: none;
+  font-family: "FontAwesome";
+  position: relative;
+}
+
+.searchbox_add {
+  display: grid;
+  place-content: center;
+  width: 2rem;
+}
+
+.searchbox_add:is(:hover, :focus) {
+  background-color: hsl(252, 73%, 84%);
+  cursor: pointer;
+}
