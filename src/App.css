@@ -1,56 +1,96 @@
-*,
-*::after,
-*::before {
-  margin: 0;
-  padding: 0;
-  box-sizing: border-box;
+.App {
+  text-align: center;
 }
 
-body {
-  background-color: hsl(252, 100%, 77%);
+.App-logo {
+  height: 40vmin;
+  pointer-events: none;
+}
+
+@media (prefers-reduced-motion: no-preference) {
+  .App-logo {
+    animation: App-logo-spin infinite 20s linear;
+  }
+}
+
+.App-header {
+  background-color: #282c34;
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  font-size: calc(10px + 2vmin);
   color: white;
-  padding-top: 5rem;
+}
+
+.App-link {
+  color: #61dafb;
+}
+
+@keyframes App-logo-spin {
+  from {
+    transform: rotate(0deg);
+  }
+  to {
+    transform: rotate(360deg);
+  }
+}
+
+.heading {
+  text-align: center;
+  font-family: "Courier New", Courier, monospace;
+  font-size: 2.5rem;
 }
 
 .App {
-  margin: auto;
-  display: grid;
-  justify-content: center;
-  min-height: 500px;
-  width: 70%;
-  max-width: 650px;
-  border: 4px solid white;
-  border-radius: 1rem;
-  grid-template-rows: 0.25fr 1fr;
-  gap: 3rem;
-}
-
-.searchbox {
-  margin-top: 4rem;
-  height: 2.5rem;
-  display: grid;
-  grid-auto-flow: column;
-  border: 1px solid white;
-  border-radius: 0.6rem 0 0 0.6rem;
-}
-
-.searchbox_input {
-  border-radius: 0.5rem 0 0 0.5rem;
-  border: none;
-  min-width: 16rem;
-  padding-left: 1rem;
-  outline: none;
-  font-family: "FontAwesome";
+  margin: 2rem auto 0 auto;
+  height: 450px;
+  width: 600px;
   position: relative;
 }
 
-.searchbox_add {
-  display: grid;
-  place-content: center;
-  width: 2rem;
+.App img {
+  height: 100%;
+  width: 100%;
 }
 
-.searchbox_add:is(:hover, :focus) {
-  background-color: hsl(252, 73%, 84%);
+.button {
+  font-size: 3rem;
   cursor: pointer;
+  opacity: 0.5;
+  background-color: rgba(128, 128, 128, 0.533);
+}
+.prev {
+  position: absolute;
+  top: 47%;
+  left: 1%;
+}
+.next {
+  position: absolute;
+  top: 47%;
+  right: 1%;
+}
+
+@media (max-width: 600px) {
+  .App {
+    height: 300px;
+    width: 400px;
+  }
+  .heading {
+    font-size: 2rem;
+  }
+}
+@media (max-width: 400px) {
+  .App {
+    height: 240px;
+    width: 320px;
+  }
+  .heading {
+    font-size: 2rem;
+  }
+  .button {
+    font-size: 2rem;
+    opacity: 0.7;
+  }
 }
